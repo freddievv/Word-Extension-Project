@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/styles.css" />
+  <title>Wordo</title>
+</head>
+
+<body>
+
+  <div class="popup-container">
+
+    <div class="popup-header">
+      <h3>Wordo</h3>
+    </div>
+
+    <div class="stats-container">
+      <div class="selected-info">
+        <span>Selected:</span>
+        <span id="selectedWord">None</span>
+      </div>
+      <button id="btnClearSelected" class="delete-btn selected-clear-btn" type="button" title="Clear selection">×</button>
+    </div>
+
+    <div class="input-container">
+      <label for="wordInput" class="sr-only">Word input</label>
+      <input aria-label="Type a word" type="text" id="wordInput" placeholder="Or type a word here..." />
+      <button aria-label="Set word" id="btnSetWord" type="button">Set</button>
+    </div>
+
+    <div class="wordo-box" id="definitionBox">
+      Select a word and click the icon.
+    </div>
+
+    <div class="wordo-actions search-actions">
+      <button id="btnSearch" type="button">Search for more results</button>
+    </div>
+
+    <div class="wordo-translate">
+      <select id="targetLang" aria-label="Target language">
+        <option value="fil">Filipino</option>
+        <option value="es">Spanish</option>
+        <option value="ja">Japanese</option>
+        <option value="ko">Korean</option>
+        <option value="zh">Chinese</option>
+      </select>
+    </div>
+
+    <div class="wordo-box" id="translateBox"></div>
+
+    <div class="wordo-actions">
+      <button id="btnSave" type="button">Save to Notes</button>
+      <button id="btnClearNotes" type="button">Clear Notes</button>
+    </div>
+
+    <div class="word-list" id="notesList" aria-live="polite"></div>
+
+    <div class="settings-container">
+      <span>Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+  </div>
+
+  <script src="src/js/helper.js"></script>
+  <script src="src/js/popup.js"></script>
+
+</body>
+</html>
